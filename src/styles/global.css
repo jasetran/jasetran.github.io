@@ -5,7 +5,7 @@
     --button: #82a87e;
     --text: #fdebf3;
     --text-light: #1e1e2e; 
-    --text-link: #78c2ad;
+    --text-link: #00ca91;
     --underline: #82a87e;
     --header: 'Avenir';
     --body: 'Avenir'; 
@@ -260,6 +260,10 @@ footer {
     content: url("/li-in-white.png");
 }
 
+.google-scholar {
+    content: url("/google-scholar-white.svg");
+}
+
 /* 404 */
 .lost {
     margin-top: 30%;
@@ -331,6 +335,10 @@ html.light {
 
 .light .linked-in {
     content: url("/li-in.png");
+}
+
+.light .google-scholar {
+    content: url("/google-scholar.svg");
 }
 
 .light .badge__link {
