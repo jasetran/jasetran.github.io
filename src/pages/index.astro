@@ -1,52 +1,78 @@
 ---
 import Layout from '../layouts/Layout.astro';
-const pageTitle = "Milky-Way";
+const pageTitle = "Jasmine E. Tran";
 ---
 <Layout pageTitle={pageTitle}>
+
     <div class="gif">
-        <img width="300" height="259" alt="RaccoonSpaceGif" src="/space.webp"/>
+        <img width="150" height="150" alt="jasThinkingGif" src="/jet-icon.gif"/>
     </div>
-    <h1>Milky-Way</h1>
-    <span class="badge">Digital Craftsman (Developer)</span>
-    <h2>About</h2>
-    <p>
-        Praesent malesuada mi nisi, quis tempus magna venenatis ut.
-        Suspendisse tempor sem at scelerisque congue. Curabitur mollis,
-        mi id molestie finibus, metus sem sagittis nunc, euismod feugiat orci neque non lorem.
-        Aenean sollicitudin erat eu molestie tempus. Nunc ac eros elementum, fermentum lacus at,
-        pellentesque mauris. Suspendisse eros neque, interdum euismod consectetur convallis,
-        porttitor at massa. Phasellus a ultrices arcu. Donec viverra, lorem in pellentesque euismod,
-        libero justo gravida nibh, non ultricies justo purus ultrices est.
-    </p>
-    <p>
-        Ut at interdum dui. Donec ut ante ex. Maecenas id ex eget nibh consequat accumsan.
-        Proin semper semper dui nec feugiat. Donec cursus neque id aliquet finibus. Morbi
-        facilisis turpis nibh, nec dictum orci dictum nec. In hac habitasse platea dictumst.
-        Maecenas mollis turpis vitae turpis bibendum, vitae tristique arcu eleifend.
-    </p>
-    <div class="center">
-        <a href="/works/">
-            <button class="btn">My portfolio</button>
-        </a>
+    
+    <div class = "wrapper">
+        <div class="four-col">
+            <img width="250" height="250" alt="jasHeadshot" src="/jet-headshot.png"/>
+            <h1>Jasmine E. Tran</h1>
+            <span class="badge">P.h.D Student in Education @ UC Irvine </span>
+            <div class = "left" style = "padding-top: 1.5rem;"> 
+                <li class="icon__btn"><a class="icon__link" href="mailto: jasetran@uci.edu"><span class="mail-icon">Email</span></a></li>
+                <li class="icon__btn"><a class="icon__link" href="https://github.com/jasetran" target="_blank"><span class="git-icon">GitHub</span></a></li>
+                <li class="icon__btn"><a class="icon__link" href="https://www.linkedin.com/in/jaseliztran/" target="_blank"><span class="linked-in">LinkedIn</span></a></li>
+            </div>
+        </div>
+        <div class="five-col">
+            <img width="700" margin-left="50%" alt="jasAndNoah" src="/jet-noah.png"/>
+        </div>
     </div>
-    <h2>Skills</h2>
-    <div class="skills center">
-        <img class="skills__img" width="46" height="46" alt="C#" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/csharp/csharp-original.svg"/>
-        <img class="skills__img" width="46" height="46" alt="DotNetCore" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dotnetcore/dotnetcore-original.svg"/>
-        <img class="skills__img" width="46" height="46" alt="TypeScript" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg"/>
-        <img class="skills__img" width="46" height="46" alt="Angular" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/angular/angular-original.svg"/>
-        <img class="skills__img" width="46" height="46" alt="Bootstrap" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bootstrap/bootstrap-original.svg"/>
-        <img class="skills__img" width="46" height="46" alt="CSS" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg"/>
-        <img class="skills__img" width="46" height="46" alt="HTML" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg"/>
-        <img class="skills__img" width="46" height="46" alt="JavaScript" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg"/>
-        <img class="skills__img" width="46" height="46" alt="Git" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg"/>
+
+    <div class = "wrapper">
+        <div class="one-col">
+            <h2>About</h2>
+            <p>
+                Hello! My name is Jasmine Tran and I am a <b> Ph.D. student in Education specializing in Teaching, Learning, and Education  
+                Improvement (TLEI) at the University of California, Irvine (UCI).</b> My advisors are <b> Professor Mark Warschaeur </b> and 
+                <b> Professor Kylie Peppler.</b> I am especially interested in digital learning, primarily in evaluating and developing educational technology that can 
+                support students with diverse needs. Through this research, I intend to better understand the learning theories and design elements that make these tools effective, 
+                and implement into practice through research-practice partnerships. Before my graduate studies, I received my <b>B.A. in 
+                Psychology from San Jose State University.</b> I also worked on the <a href="https://roar.stanford.edu/"> Rapid Online Assessments of Reading</a> project at Stanford University 
+                where I designed and developed gamified, online reading assessments. 
+            </p>
+            <p>
+                My work in the <a href="https://www.digitallearninglab.org/">Digital Learning Lab</a> focuses on <a href="https://www.conversetolearn.org/"> Converse to Learn</a>, an NSF-funded project in collaboration with PBS Kids. We are conducting
+                research that explores how children learn STEM concepts from interactive videos. We use <b>Conversational Agents (CA)</b> so a child's favorite character can respond to them while
+                they engage with educational media (Imagine Dora the Explorer, but if Dora could respond to you!). Through this research, we hope to improve upon this technology to make STEM learning more
+                engaging and impactful for students of all backgrounds. 
+            </p>
+            <h2>Chat with me!</h2>
+            <p>
+                I have experienced first-hand how powerful <b>mentorship</b> is. As a first generation Vietnamese-American, I would not have been able 
+                to pursue a Ph.D. program without <b>amazing mentors who took a chance on me and affordable education.</b> If you are someone who has been historically underrepresented
+                in academia (e.g. low-income, first-generation, queer) or just someone who is anxious about belonging in academia then feel free to reach out to me (<b>jasetran@uci.edu</b>) 
+                for advice or anything else. I am more than happy to chat about anything with anyone. <b>Research is for everyone!</b>
+            </p>
+        </div>
     </div>
-    <h2>Interests</h2>
-    <p>
-        Ut at interdum dui. Donec ut ante ex. Maecenas id ex eget nibh consequat accumsan.
-        Proin semper semper dui nec feugiat. Donec cursus neque id aliquet finibus. Morbi
-        facilisis turpis nibh, nec dictum orci dictum nec. In hac habitasse platea dictumst.
-        Maecenas mollis turpis vitae turpis bibendum, vitae tristique arcu eleifend.
-    </p>
+
+    <div class = "wrapper">
+        <div class="two-col">
+            <h2>Upcoming conferences</h2>
+            <p>
+            This will be regularly updated with conferences I will be attending or have recently attended:
+                <li> <b>September 2024:</b> I presented a paper at the NCME: Classroom Assessment Conference in Chicago. </li>
+                <li> <b>February 2024:</b> I attended the AI + Education Summit at Stanford University. </li>
+                <li> <b>August 2023:</b> I presented a poster at the Flux Society in Santa Rosa. </li>
+            </p>
+        </div>
+        <div class="three-col">
+            <h2> Skills </h2>
+            <div class="skills center">
+                <img class="skills__img" width="46" height="46" alt="R" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/r/r-original.svg"/>
+                <img class="skills__img" width="46" height="46" alt="JavaScript" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-plain.svg"/>
+                <img class="skills__img" width="46" height="46" alt="CSS" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg"/>
+                <img class="skills__img" width="46" height="46" alt="Stata" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/stata/stata-original-wordmark.svg"/>
+                <img class="skills__img" width="46" height="46" alt="Git" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg"/>
+            </div>
+        </div>
+    </div>
+
 </Layout>
 
