@@ -4,6 +4,7 @@ const projectsCollection = defineCollection({
     type: 'content',
     schema: z.object({
       title: z.string(),
+      status: z.string(),
       description: z.string(),
       image: z.object({
         url: z.string(),
@@ -17,10 +18,9 @@ const projectsCollection = defineCollection({
         url: z.string(),
         alt: z.string()
       }),
-      platform: z.string(),
-      stack: z.string(),
+      affiliation: z.string(),
+      professors: z.string(),
       website: z.string(),
-      github: z.string(),
     })
 });
 

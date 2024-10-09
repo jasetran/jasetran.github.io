@@ -1,19 +1,19 @@
 ---
-title: 'Project 1'
-description: 'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci'
+title: 'Converse to Learn'
+status: 'Current'
+description: 'Educational media that uses conversational agents to support children STEM learning and engagement'
 image:
-    url: '/GitHub.webp'
-    alt: 'GitHub wallpaper'
+    url: '/converse-to-learn.png'
+    alt: 'Converse to Learn image'
 worksImage1:
-    url: '/image-1.webp'
+    url: '/elinor-wonders-why.png'
     alt: 'first image of your project.'
 worksImage2:
-    url: '/image-2.webp'
+    url: '/lyla-in-the-loop.png'
     alt: 'second image of your project.'
-platform: Web
-stack: Astro, JavaScript
-website: https://astro-milky-way.netlify.app/
-github: https://github.com/ttomczak3/Milky-Way
+affiliation: 'UC Irvine, Harvard University, & University of Michigan'
+professors: 'Mark Warschauer & Ying Xu'
+website: https://www.conversetolearn.org/
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras faucibus a tortor at molestie. Sed pellentesque leo auctor, auctor lorem nec, venenatis risus. Vivamus commodo ipsum vitae orci finibus, vel porta nunc viverra. In hac habitasse platea dictumst. Nunc pretium, ligula ultricies consequat sollicitudin, enim ex ullamcorper nisl.

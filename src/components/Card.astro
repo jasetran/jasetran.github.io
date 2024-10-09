@@ -3,14 +3,15 @@ interface Props {
     url: string;
     image: string;
     title: string;
+    status: string;
     body: string;
 }
 
-const { url, image, title, body } = Astro.props;
+const { url, image, status, title, body } = Astro.props;
 ---
 
 <li class="card">
-    <a class="card__link" href={url}>
+    <a class="card__link" style = "color: #ffffff" href={url}>
         <div class="center">
             <img
                 class="card__img"
@@ -23,6 +24,9 @@ const { url, image, title, body } = Astro.props;
         <h3 class="card__title">
             {title}
         </h3>
+        <div class="center"> 
+            <span class="badge badge--item"> {status} </span>
+        </div>
         <p class="card__txt">
             {body}
         </p>

@@ -7,12 +7,14 @@ const pageTitle = "Research Projects";
 ---
 <Layout pageTitle={pageTitle}>
     <div class="gif">
-        <img width="300" height="259" alt="RaccoonLaptopGif" src="/laptop.webp"/>
+        <img width="175" height="175" alt="LaptopGif" src="/laptop.gif"/>
     </div>
     <h2>Research Projects</h2>
+    <p> Click on the cards below to learn more about my current and previous research projects: </p>
     <ul role="list" class="link-card-grid">
         {allProjects.map((card) => <Card 
             url={`/projects/${card.slug}/`} 
+            status={card.data.status}
             image={card.data.image.url} 
             title={card.data.title} 
             body={card.data.description}

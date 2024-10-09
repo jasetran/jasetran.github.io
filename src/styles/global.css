@@ -5,11 +5,15 @@
     --button: #82a87e;
     --text: #fdebf3;
     --text-light: #1e1e2e; 
-    --text-link: #00ca91;
+    --text-link: #ffffff;
     --underline: #82a87e;
     --header: 'Avenir';
     --body: 'Avenir'; 
 }
+
+a:-webkit-any-link {
+    color: #009e71;;
+}  
 
 html {
     background-color: var(--background);
@@ -142,7 +146,6 @@ small, li {
     text-decoration: none;
     line-height: 1.4;
     border-radius: 8px;
-    color: var(--text);
 }
 
 .card__img {
@@ -342,7 +345,7 @@ html.light {
 }
 
 .light .badge__link {
-    color: var(--text-link);
+    color: #009e71;
 }
 
 /* Media Query */
