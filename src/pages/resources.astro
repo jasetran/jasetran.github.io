@@ -1,0 +1,46 @@
+---
+import { getCollection } from "astro:content";
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/CardPost.astro";
+const allPosts = await getCollection("posts");
+const pageTitle = "Resources";
+---
+
+<Layout pageTitle={pageTitle}>
+    <h2>Resources</h2>
+        <p> A growing list of resources that have been especially helpful for me: </p>
+        <div class="wrapper" style="align-items: center;"> 
+            <div class="res-col-one">
+                <h3>Programming</h3>
+                <li style="text-align: left;"> <a href = "https://swirlstats.com/"> Swirl</a>: This is a great resource for learning R because it's 
+                free and teaches you in R Studio! </li> 
+                <li style="text-align: left;"> <a href = "https://www.codecademy.com/pages/codecademy-discount-codes"> Code Academy</a>: If you're completely 
+                new to computer science then Code Academy offers helpful courses with foundational knowledge to get started. They offer financial aid and discounts for students or 
+                individuals coming from low-income. I was able to get Code Academy for free! </li>
+                <li style="text-align: left;"> <a href = "https://github.com/matloff/fasteR"> Fast Lane to Learning R!</a>: This online course by 
+                Professor Norm Matloff allowed me to practice and applied what I learned. </li>
+                </li>
+            </div>
+        <div class="res-col-two">
+            <h3>Design</h3>
+            <li style="text-align: left;"> <a href = "https://astro.build/"> Astro</a>: Not super friendly if you have little experience with HTML
+            and CSS, but still an amazing option (and free!). This website was created using an Astro template. </a> </li>
+            <li style="text-align: left;"> <a href = "https://www.canva.com/education/"> Canva</a>: Canva is my favorite and the most accessible option
+             for quick and easy graphics. </li>
+            <li style="text-align: left;"> <a href = "https://procreate.com/"> Procreate</a>: If you're not familiar
+            with digital art then I recommend Procreate for free-hand drawing. Almost all my design work is done in Procreate and then transferred to other editors. </li>
+            <li style="text-align: left;"> <a href = "https://affinity.serif.com/en-us/designer/"> Affinity Designer</a>: A slightly more affordable option to 
+            Adobe </li>
+        </div>
+        <div class="res-col-three">
+            <h3>Research Opportunities</h3>
+            <li style="text-align: left;"> <a href = "https://astro.build/"> FLi Sci</a>: A cool program run
+            by the Gabriel Reyes (Gabe actually helped me get my start in academia!) that provides research opportunities to under-served 
+            high school students! </li>
+            <li style="text-align: left;"> <a href = "https://bridgetophd.facultydiversity.columbia.edu/"> Columbia Bridge to the Ph.D. </a>: There are
+            many who can't afford to do a Master's to pursue research. Look into post-bac programs and fellowships that provide stipends!.  </li>
+            <li style="text-align: left;"> <a href = "https://www.asgraduate.pitt.edu/hot-metal-bridge-post-bac-program"> Hot Metal Bridge Post-Bac </a>: 
+            Another great post-bac program that provides a stipend and housing for fresh graduates at the University of Pittsburgh. </li>
+        </div>
+    </div>
+</Layout>

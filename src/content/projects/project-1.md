@@ -16,4 +16,4 @@ professors: 'Mark Warschauer & Ying Xu'
 website: https://www.conversetolearn.org/
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras faucibus a tortor at molestie. Sed pellentesque leo auctor, auctor lorem nec, venenatis risus. Vivamus commodo ipsum vitae orci finibus, vel porta nunc viverra. In hac habitasse platea dictumst. Nunc pretium, ligula ultricies consequat sollicitudin, enim ex ullamcorper nisl.
+Children thrive when learning through conversation. In this research project, we integrated conversational agents (CAs) into educational TV shows to support children's STEM learning. Our intial work focused on Elinor Wonders Why, and we are now expanding this approach with Lyla in the Loop, exploring its impact in both lab and home settings. The Converse to Learn project is the main project I currently work on through my graduate studies. 

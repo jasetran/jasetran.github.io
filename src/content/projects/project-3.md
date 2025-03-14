@@ -6,14 +6,14 @@ image:
     url: '/reading-intervention.jpeg'
     alt: 'LMB image'
 worksImage1:
-    url: '/image-1.webp'
+    url: '/noah-mri.JPG'
     alt: 'first image of your project.'
 worksImage2:
-    url: '/image-2.webp'
+    url: '/noah-mia-mri.JPG'
     alt: 'second image of your project.'
 affiliation: 'Stanford University'
 professors: 'Jason Yeatman'
 website: https://dyslexia.stanford.edu/
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras faucibus a tortor at molestie. Sed pellentesque leo auctor, auctor lorem nec, venenatis risus. Vivamus commodo ipsum vitae orci finibus, vel porta nunc viverra. In hac habitasse platea dictumst. Nunc pretium, ligula ultricies consequat sollicitudin, enim ex ullamcorper nisl.
+During my time at Stanford, I also worked on a longtudinal neuroimaging study conducted with Lindamood Bell reading interventions. My primary responsibilities included recruiting and scheduling families, administering reading assessments, and conducting MRI scans on children. This experience was particularly insightful, as I observed how struggling readers engaged with educational technology compared to typical readers. While my current focus has shifted away from neuroscience, this work provided a valuable perspective on on the experiences of diverse learners.
