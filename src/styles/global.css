@@ -1,7 +1,7 @@
 /* Global styles */
 @font-face {
     font-family: 'Avenir';
-    src: url("src/styles/AvenirLTProBook.otf");
+    src: url("./AvenirLTProBook.otf");
 }
 
 :root {
@@ -16,6 +16,10 @@
     --underline: #82a87e;
     --header: 'Avenir';
     --body: 'Avenir';
+}
+
+html * {
+    font-family: 'Avenir';
 }
 
 a:-webkit-any-link {
