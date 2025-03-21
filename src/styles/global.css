@@ -1,4 +1,9 @@
 /* Global styles */
+@font-face {
+    font-family: 'Avenir';
+    src: url("src/styles/AvenirLTProBook.otf");
+}
+
 :root {
     --background: #293931;
     --background-light: #ecf8ed;
