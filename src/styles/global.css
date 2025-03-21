@@ -4,6 +4,8 @@
     --background-light: #ecf8ed;
     --button: #82a87e;
     --text: #fdebf3;
+    --textbox: #6a5e55;
+    --textbox-light: #e4dcd4;
     --text-light: #1e1e2e;
     --text-link: #ffffff;
     --underline: #82a87e;
@@ -360,6 +362,18 @@ html.light {
     color: #009e71;
 }
 
+.light .res-col-one {
+    background-color: var(--textbox-light);
+}
+
+.light .res-col-two {
+    background-color: var(--textbox-light);
+}
+
+.light .res-col-three {
+    background-color: var(--textbox-light);
+}
+
 /* Media Query */
 @media only screen and (max-width: 600px) {
     body {
@@ -439,7 +453,7 @@ html.light {
     grid-row: 1;
     align-self: center;
     text-align: center;
-    background: #917f6f;
+    background: var(--textbox);
     border-radius: 6px;
     padding: 25px;
 }
@@ -449,7 +463,7 @@ html.light {
     grid-row: 1;
     align-self: center;
     text-align: center;
-    background: #917f6f;
+    background: var(--textbox);
     border-radius: 6px;
     padding: 25px;
 }
@@ -459,7 +473,7 @@ html.light {
     grid-row: 1;
     align-self: center;
     text-align: center;
-    background: #917f6f;
+    background: var(--textbox);
     border-radius: 6px;
     padding: 25px;
 }

@@ -10,6 +10,11 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^4.16.7"
+    "astro": "^4.16.7",
+    "astro-icon": "^1.1.5"
+  },
+  "devDependencies": {
+    "@iconify-json/fluent-emoji-high-contrast": "^1.2.3",
+    "@iconify-json/mdi": "^1.2.3"
   }
 }
