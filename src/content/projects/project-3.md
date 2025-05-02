@@ -17,3 +17,6 @@ website: https://dyslexia.stanford.edu/
 ---
 
 During my time at Stanford, I also worked on a longtudinal neuroimaging study conducted with Lindamood Bell reading interventions. My primary responsibilities included recruiting and scheduling families, administering reading assessments, and conducting MRI scans on children. This experience was particularly insightful, as I observed how struggling readers engaged with educational technology compared to typical readers. While my current focus has shifted away from neuroscience, this work provided a valuable perspective on on the experiences of diverse learners.
+
+### Selected Publications & Posters
+- Stone, H., Mitchell, J.L., Fuentes-Jimenez, M., **Tran, J.E.**, Yeatman, J.D., & Yablonski, M. (2024). Anatomically distinct regions in the inferior frontal cortex are modulated by task and reading. *The Journal of Neuroscience*, https://doi.org/10.1523/JNEUROSCI.1767-24.2025. 
