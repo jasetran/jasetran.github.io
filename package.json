@@ -11,7 +11,8 @@
   },
   "dependencies": {
     "astro": "^4.16.7",
-    "astro-icon": "^1.1.5"
+    "astro-icon": "^1.1.5",
+    "code": "^5.2.4"
   },
   "devDependencies": {
     "@iconify-json/fluent-emoji-high-contrast": "^1.2.3",
