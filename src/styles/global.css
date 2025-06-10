@@ -76,7 +76,7 @@ p {
 small,
 li {
     font-family: var(--body);
-    padding-bottom: 0.5rem;
+    padding-bottom: 0.2rem;
 }
 
 /* Navigation Bar */
@@ -450,7 +450,7 @@ html.light {
     display: inline-grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     margin: 0rem 1rem 0rem 1rem;
-    gap: 2rem;
+    gap: 1.2rem;
     justify-content: center;
 }
 
