@@ -1,0 +1,599 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Jasmine E. Tran — Ph.D. Student in Education at UC Irvine. Digital learning, EdTech, and Conversational Agents research."
+    />
+    <title>Jasmine E. Tran</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <script>
+      (function () {
+        var t =
+          localStorage.getItem("theme") ||
+          (window.matchMedia("(prefers-color-scheme: dark)").matches
+            ? "dark"
+            : "light");
+        document.documentElement.setAttribute("data-theme", t);
+      })();
+    </script>
+  </head>
+  <body>
+    <!-- ═══ NAV ═══════════════════════════════════════════ -->
+    <nav>
+      <div class="nav-inner">
+        <a href="/" class="nav-logo">Jasmine E. Tran</a>
+        <ul class="nav-links">
+          <li><a href="/">Home</a></li>
+          <li><a href="/research/">Research</a></li>
+          <li><a href="/resources/">Resources</a></li>
+          <li>
+            <a
+              href="https://docs.google.com/document/d/1BcbYte-SFrXaqr7sQPvWU1XmWC8qRPzU9fMi_P70Ums/edit?usp=sharing"
+              target="_blank"
+              class="cv-link"
+              >CV</a
+            >
+          </li>
+        </ul>
+        <button
+          id="theme-toggle"
+          class="theme-toggle"
+          aria-label="Toggle dark mode"
+        >
+          <span class="theme-toggle-thumb">☀️</span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- ═══ HERO ═══════════════════════════════════════════ -->
+    <section id="hero">
+      <div class="container">
+        <div class="hero-layout">
+          <!-- TEXT -->
+          <div class="hero-text">
+            <div
+              class="gif-badge hero-gif"
+              title="That's me thinking very hard 🤔"
+            >
+              <img
+                src="/images/jet-icon.gif"
+                alt="Jasmine thinking GIF"
+                onerror="
+                  this.parentElement.innerHTML = '🌱';
+                  this.parentElement.style.fontSize = '2rem';
+                "
+              />
+            </div>
+            <span class="hero-eyebrow">Ph.D. Student @ UC Irvine</span>
+            <h1><em>Jasmine E. Tran</em></h1>
+            <p class="hero-tagline">
+              Child-centered designer · AI & EdTech researcher
+            </p>
+            <div class="social-row">
+              <a href="mailto:jasetran@uci.edu" class="social-chip">
+                <svg
+                  width="13"
+                  height="13"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <rect x="2" y="4" width="20" height="16" rx="2" />
+                  <path d="m2 7 10 7 10-7" />
+                </svg>
+                Email
+              </a>
+              <a
+                href="https://github.com/jasetran"
+                target="_blank"
+                class="social-chip"
+              >
+                <svg
+                  width="13"
+                  height="13"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.165 6.839 9.489.5.09.682-.218.682-.484 0-.236-.009-.866-.013-1.7-2.782.603-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.464-1.11-1.464-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.03-2.682-.103-.254-.447-1.27.098-2.646 0 0 .84-.268 2.75 1.026A9.578 9.578 0 0 1 12 6.836a9.59 9.59 0 0 1 2.504.337c1.909-1.294 2.747-1.026 2.747-1.026.547 1.376.202 2.394.1 2.646.64.698 1.026 1.591 1.026 2.682 0 3.841-2.337 4.687-4.565 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.742 0 .268.18.58.688.482A10.001 10.001 0 0 0 22 12c0-5.523-4.477-10-10-10z"
+                  />
+                </svg>
+                GitHub
+              </a>
+              <a
+                href="https://www.linkedin.com/in/jaseliztran/"
+                target="_blank"
+                class="social-chip"
+              >
+                <svg
+                  width="13"
+                  height="13"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
+                  />
+                </svg>
+                LinkedIn
+              </a>
+              <a
+                href="https://scholar.google.com/citations?user=dcmtehQAAAAJ&hl=en"
+                target="_blank"
+                class="social-chip"
+              >
+                <svg
+                  width="13"
+                  height="13"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M5.242 13.769 0 9.5 12 0l12 9.5-5.242 4.269C17.548 11.249 14.978 9.5 12 9.5c-2.977 0-5.548 1.748-6.758 4.269zM12 10a7 7 0 1 0 0 14 7 7 0 0 0 0-14z"
+                  />
+                </svg>
+                Scholar
+              </a>
+            </div>
+          </div>
+
+          <!-- PHOTOS -->
+          <div class="hero-photos">
+            <div class="headshot-ring">
+              <img
+                src="/images/jet-headshot.png"
+                alt="Jasmine E. Tran"
+                onerror="
+                  this.style.background = '#a8c4aa';
+                  this.removeAttribute('onerror');
+                "
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ ABOUT ═══════════════════════════════════════════ -->
+    <section id="about">
+      <div class="container">
+        <h2 class="section-heading reveal">
+          <i class="fa-solid fa-user fa-icon"></i> About
+        </h2>
+        <div class="about-prose">
+          <p class="reveal" data-delay="0.05s">
+            I am a
+            <strong
+              >second-year Ph.D. student in Education specializing in Teaching,
+              Learning, and Education Improvement (TLEI)
+            </strong>
+            at the University of California, Irvine. My advisors are
+            <strong>Professor Mark Warschauer</strong> and
+            <strong>Professor Kylie Peppler.</strong> I am especially interested
+            in digital learning—particularly in evaluating and developing
+            educational technology that leverages the unique strengths of
+            diverse students. I aim to understand the learning theories and
+            design elements that make these tools effective and to implement
+            them through research–practice partnerships.
+          </p>
+          <p class="reveal" data-delay="0.10s">
+            As a graduate student researcher for the
+            <a href="https://www.digitallearninglab.org/" target="_blank"
+              >Digital Learning Lab</a
+            >, I work on
+            <a href="https://www.conversetolearn.org/" target="_blank"
+              >Converse to Learn</a
+            >
+            which is an NSF-funded project in collaboration with PBS KIDS. We
+            investigate how young children learn STEM concepts from interactive
+            educational media by embedding
+            <strong> AI conversational agents (CAs)</strong>. Like Dora the
+            Explorer, but if Dora could <em>actually</em> answer you! Through
+            this project, my goal is to design learning tools that can make STEM
+            learning more engaging and impactful for students of all
+            backgrounds. Prior to my Ph.D. studies, I received my B.A. in
+            Psychology from San Jose State University and worked on the
+            <a href="https://roar.stanford.edu/" target="_blank"
+              >Rapid Online Assessments of Reading</a
+            >
+            project at Stanford University, where I designed gamified, online
+            reading assessments.
+          </p>
+        </div>
+        <div class="tip-box reveal" style="margin-top: 1rem" data-delay="0.15s">
+          <strong
+            >I am seeking industry or academic internships focused on
+            design-based research for Summer 2026! If you have any opportunities
+            I would be a good fit for, please reach out at
+            jasetran@uci.edu.</strong
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ GIF GALLERY / CAROUSEL ═════════════════════════ -->
+    <section id="gif-gallery">
+      <div class="container">
+        <div class="carousel-header">
+          <h2 class="section-heading reveal" style="margin-bottom: 0; flex: 1">
+            <i class="fa-solid fa-palette fa-icon"></i> Design Corner
+          </h2>
+          <div class="carousel-controls reveal" data-delay="0.1s">
+            <button
+              class="carousel-btn"
+              id="carousel-prev"
+              aria-label="Previous"
+            >
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="m15 18-6-6 6-6" />
+              </svg>
+            </button>
+            <button class="carousel-btn" id="carousel-next" aria-label="Next">
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="m9 18 6-6-6-6" />
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <div class="carousel-wrap reveal" data-delay="0.15s">
+          <div class="carousel-track-outer">
+            <div class="carousel-track">
+              <div class="carousel-slide">
+                <div class="gif-card has-content" style="border-style: solid">
+                  <img
+                    src="/images/elinor-art.png"
+                    alt="Jasmine icon gif"
+                    style="
+                      width: 100%;
+                      height: 100%;
+                      object-fit: cover;
+                      position: absolute;
+                      inset: 0;
+                      border-radius: 14px;
+                    "
+                  />
+                </div>
+              </div>
+              <div class="carousel-slide">
+                <div class="gif-card">
+                  <div class="gif-placeholder-icon">
+                    <i class="fa-solid fa-seedling"></i>
+                  </div>
+                  <img
+                    src="/images/custom-agent-gif.gif"
+                    alt="Custom agent design gif"
+                    style="
+                      width: 100%;
+                      height: 100%;
+                      object-fit: cover;
+                      position: absolute;
+                      inset: 0;
+                      border-radius: 14px;
+                    "
+                  />
+                </div>
+              </div>
+
+              <div class="carousel-slide">
+                <div class="gif-card">
+                  <div class="gif-placeholder-icon">
+                    <i class="fa-solid fa-flask"></i>
+                  </div>
+                  <img
+                    src="/images/roar-lion.gif"
+                    alt="Stanford ROAR lion icon gif"
+                    style="
+                      width: 100%;
+                      height: 100%;
+                      object-fit: cover;
+                      position: absolute;
+                      inset: 0;
+                      border-radius: 14px;
+                    "
+                  />
+                </div>
+              </div>
+
+              <div class="carousel-slide">
+                <div class="gif-card">
+                  <div class="gif-placeholder-icon">
+                    <i class="fa-solid fa-book-open"></i>
+                  </div>
+                  <img
+                    src="/images/astronaut-girl-confused.png"
+                    alt="Confused astronaut girl"
+                    style="
+                      width: 100%;
+                      height: 100%;
+                      object-fit: cover;
+                      position: absolute;
+                      inset: 0;
+                      border-radius: 14px;
+                    "
+                  />
+                </div>
+              </div>
+
+              <div class="carousel-slide">
+                <div class="gif-card">
+                  <div class="gif-placeholder-icon">
+                    <i class="fa-solid fa-laptop-code"></i>
+                  </div>
+                  <img
+                    src="/images/roar-sre.gif"
+                    alt="Gamified reading assessment story"
+                    style="
+                      width: 100%;
+                      height: 100%;
+                      object-fit: cover;
+                      position: absolute;
+                      inset: 0;
+                      border-radius: 14px;
+                    "
+                  />
+                </div>
+              </div>
+
+              <div class="carousel-slide">
+                <div class="gif-card">
+                  <div class="gif-placeholder-icon">
+                    <i class="fa-solid fa-star"></i>
+                  </div>
+                  <img
+                    src="/images/abc-soup-stir.gif"
+                    alt="ABC soup being stirred gif"
+                    style="
+                      width: 100%;
+                      height: 100%;
+                      object-fit: cover;
+                      position: absolute;
+                      inset: 0;
+                      border-radius: 14px;
+                    "
+                  />
+                </div>
+              </div>
+
+              <div class="carousel-slide">
+                <div class="gif-card">
+                  <div class="gif-placeholder-icon">
+                    <i class="fa-solid fa-wand-magic-sparkles"></i>
+                  </div>
+                  <img
+                    src="/images/ryan-chibi.gif"
+                    alt="Boy talking gif"
+                    style="
+                      width: 100%;
+                      height: 100%;
+                      object-fit: cover;
+                      position: absolute;
+                      inset: 0;
+                      border-radius: 14px;
+                    "
+                  />
+                </div>
+              </div>
+            </div>
+            <!-- end .carousel-track -->
+          </div>
+          <!-- end .carousel-track-outer -->
+          <div class="carousel-dots"></div>
+        </div>
+
+        <p
+          class="reveal"
+          data-delay="0.2s"
+          style="
+            font-size: 0.82rem;
+            color: var(--text-faint);
+            margin-top: 1rem;
+            font-style: italic;
+          "
+        >
+          <i class="fa-solid fa-circle-info" style="color: var(--sage)"></i>
+          I draw freehand and do vector art sometimes!
+        </p>
+      </div>
+    </section>
+
+    <!-- ═══ MENTORSHIP ══════════════════════════════════════ -->
+    <section id="mentorship">
+      <div class="container">
+        <h2 class="section-heading reveal">
+          <i class="fa-solid fa-comments fa-icon"></i> Chat with Me!
+        </h2>
+        <div class="mentorship-card reveal" data-delay="0.1s">
+          <div class="mentorship-card-body">
+            <p>
+              I have experienced first-hand how powerful mentorship is. As a
+              first-generation Vietnamese-American college student, I would not
+              have been able to pursue a Ph.D. program without financial
+              supports and amazing mentors who took a chance on me.
+            </p>
+            <p>
+              If you are someone who has been historically underrepresented in
+              academia — low-income, first-generation, queer — or just someone
+              who is anxious about academia, please feel free to reach out! I am
+              more than happy to chat, because
+              <strong>research is for everyone. 🌱</strong>
+            </p>
+            <a href="mailto:jasetran@uci.edu" class="cta-btn">
+              <svg
+                width="14"
+                height="14"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <rect x="2" y="4" width="20" height="16" rx="2" />
+                <path d="m2 7 10 7 10-7" />
+              </svg>
+              Email me at jasetran@uci.edu
+            </a>
+          </div>
+
+          <div class="mentorship-imgs">
+            <div class="mentorship-img-wrap" style="margin-bottom: 0.5rem">
+              <img
+                src="images/anya.jpg"
+                alt="Jasmine and her mentor, Anya Ma"
+                class="mentorship-img"
+              />
+            </div>
+
+            <div class="mentorship-img-wrap">
+              <img
+                src="images/uci-mentees.jpg"
+                alt="Jasmine with her mentees"
+                class="mentorship-img"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ CONFERENCES ═════════════════════════════════════ -->
+    <section id="conferences">
+      <div class="container">
+        <h2 class="section-heading reveal">
+          <i class="fa-solid fa-calendar-days fa-icon"></i> Latest News
+        </h2>
+        <div class="timeline-item">
+          <span class="timeline-date">Feb 2026</span>
+          <span class="timeline-content">
+            Interactive tool and demo accepted to
+            <a href="https://2026.isls.org/" target="_blank">ISLS 2026</a>
+            <span class="badge badge-upcoming">Upcoming</span>
+          </span>
+        </div>
+        <div class="timeline-item">
+          <span class="timeline-date">Feb 2026</span>
+          <span class="timeline-content">
+            Presented a concurrent session at the NSF Advancing Informal STEM
+            Learning awardee meeting
+          </span>
+        </div>
+        <div class="timeline-item">
+          <span class="timeline-date">Jan 2026</span>
+          <span class="timeline-content">
+            Three mentees accepted as
+            <a href="https://sites.uci.edu/cpleads" target="_blank"
+              >UCI CP-LEADS</a
+            >
+            fellows!
+          </span>
+        </div>
+        <div class="timeline reveal" data-delay="0.1s">
+          <div class="timeline-item">
+            <span class="timeline-date">May 2025</span>
+            <span class="timeline-content">
+              Presented a poster at the
+              <a href="https://cald-ai.github.io/" target="_blank"
+                >CALD-AI Workshop</a
+              >
+            </span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ FOOTER ══════════════════════════════════════════ -->
+    <footer>
+      <div class="footer-inner">
+        <p>© 2026 Jasmine E. Tran · Made with a lot of coffee and love ☕</p>
+        <div class="footer-socials">
+          <a
+            href="mailto:jasetran@uci.edu"
+            class="footer-icon"
+            aria-label="Email"
+          >
+            <svg
+              width="15"
+              height="15"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <rect x="2" y="4" width="20" height="16" rx="2" />
+              <path d="m2 7 10 7 10-7" />
+            </svg>
+          </a>
+          <a
+            href="https://github.com/jasetran"
+            target="_blank"
+            class="footer-icon"
+            aria-label="GitHub"
+          >
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.165 6.839 9.489.5.09.682-.218.682-.484 0-.236-.009-.866-.013-1.7-2.782.603-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.464-1.11-1.464-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.03-2.682-.103-.254-.447-1.27.098-2.646 0 0 .84-.268 2.75 1.026A9.578 9.578 0 0 1 12 6.836a9.59 9.59 0 0 1 2.504.337c1.909-1.294 2.747-1.026 2.747-1.026.547 1.376.202 2.394.1 2.646.64.698 1.026 1.591 1.026 2.682 0 3.841-2.337 4.687-4.565 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.742 0 .268.18.58.688.482A10.001 10.001 0 0 0 22 12c0-5.523-4.477-10-10-10z"
+              />
+            </svg>
+          </a>
+          <a
+            href="https://www.linkedin.com/in/jaseliztran/"
+            target="_blank"
+            class="footer-icon"
+            aria-label="LinkedIn"
+          >
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
+              />
+            </svg>
+          </a>
+          <a
+            href="https://scholar.google.com/citations?user=dcmtehQAAAAJ&hl=en"
+            target="_blank"
+            class="footer-icon"
+            aria-label="Google Scholar"
+          >
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M5.242 13.769 0 9.5 12 0l12 9.5-5.242 4.269C17.548 11.249 14.978 9.5 12 9.5c-2.977 0-5.548 1.748-6.758 4.269zM12 10a7 7 0 1 0 0 14 7 7 0 0 0 0-14z"
+              />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>

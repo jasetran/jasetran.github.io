@@ -1,0 +1,332 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Jasmine E. Tran — Research in digital learning, Conversational Agents, and educational technology."
+    />
+    <title>Research · Jasmine E. Tran</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <script>
+      (function () {
+        var t =
+          localStorage.getItem("theme") ||
+          (window.matchMedia("(prefers-color-scheme: dark)").matches
+            ? "dark"
+            : "light");
+        document.documentElement.setAttribute("data-theme", t);
+      })();
+    </script>
+  </head>
+  <body>
+    <!-- ═══ NAV ═══════════════════════════════════════════ -->
+    <nav>
+      <div class="nav-inner">
+        <a href="/" class="nav-logo">Jasmine E. Tran</a>
+        <ul class="nav-links">
+          <li><a href="/">Home</a></li>
+          <li><a href="/research/" class="active">Research</a></li>
+          <li><a href="/resources/">Resources</a></li>
+          <li>
+            <a
+              href="https://docs.google.com/document/d/1BcbYte-SFrXaqr7sQPvWU1XmWC8qRPzU9fMi_P70Ums/edit?usp=sharing"
+              target="_blank"
+              class="cv-link"
+              >CV</a
+            >
+          </li>
+        </ul>
+        <button
+          id="theme-toggle"
+          class="theme-toggle"
+          aria-label="Toggle dark mode"
+        >
+          <span class="theme-toggle-thumb">☀️</span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- ═══ PAGE HERO ═══════════════════════════════════════ -->
+    <section class="page-hero">
+      <div class="container">
+        <div class="page-hero-layout">
+          <div class="page-hero-gif">
+            <img
+              src="/images/laptop.gif"
+              alt="Laptop animation"
+              class="page-hero-gif-img"
+            />
+          </div>
+          <div class="hero-text">
+            <h1>Research Projects</h1>
+            <p>
+              Exploring how educational technology can empower diverse learners
+              — from gamified reading assessments to AI-powered conversational
+              agents for STEM learning.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ CURRENT RESEARCH ════════════════════════════════ -->
+    <section id="current">
+      <div class="container">
+        <h2 class="section-heading reveal">
+          <i class="fa-solid fa-flask fa-icon"></i> Current Projects
+        </h2>
+
+        <!-- Converse to Learn -->
+        <div class="research-card reveal" data-delay="0.05s">
+          <div class="research-img-wrap">
+            <img
+              src="/images/elinor-wonders-why.gif"
+              alt="Converse to Learn project"
+              class="research-img"
+              onerror="
+                this.style.display = 'none';
+                this.nextElementSibling.style.display = 'flex';
+              "
+            />
+          </div>
+          <div class="research-card-body">
+            <div class="research-card-top">
+              <h3>Converse to Learn</h3>
+              <span class="research-tag">Active</span>
+            </div>
+            <p>
+              Children thrive when learning through conversation. This research
+              projects integrates AI-powered conversational agents into
+              educational programming to support children’s STEM learning. Our
+              initial work focused on <i>Elinor Wonders Why</i>, and we are now
+              expanding this approach with <i>Lyla in the Loop</i>, exploring
+              its impact in both lab and home settings.
+            </p>
+            <div class="research-meta">
+              <span><i class="fa-solid fa-school"></i> UC Irvine</span>
+            </div>
+            <a
+              href="https://www.conversetolearn.org/"
+              target="_blank"
+              class="cta-btn"
+              style="
+                color: white;
+                font-size: 0.82rem;
+                padding: 0.5rem 1rem;
+                margin-top: 1.25rem;
+                display: inline-flex;
+              "
+            >
+              Project Website
+            </a>
+          </div>
+        </div>
+
+        <!-- Custom AI Agents -->
+        <div class="research-card reveal" data-delay="0.05s">
+          <div class="research-img-wrap">
+            <img
+              src="/images/custom-agent-ui.gif"
+              alt="Custom AI Agents project showcase"
+              class="research-img"
+              style="object-position: center 80%"
+            />
+          </div>
+          <div class="research-card-body">
+            <div class="research-card-top">
+              <h3>Designing AI Agents for Early Childhood</h3>
+              <span class="research-tag">Active</span>
+            </div>
+            <p>
+              Much is still unknown on how to design appropriate AI agents for
+              young children. I designed and programmed a web-based, AI-powered
+              conversational agent to explore how visual embodiment influences
+              children’s dialogue and learning. I examined how text-based,
+              avatar-based, and customizable agents influenced engagement and
+              response patterns. This work was submitted to IDC 2026 as a short
+              paper.
+            </p>
+            <div class="research-meta">
+              <span><i class="fa-solid fa-school"></i> UC Irvine</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ PREVIOUS RESEARCH ════════════════════════════════ -->
+    <section id="current">
+      <div class="container">
+        <h2 class="section-heading reveal">
+          <i class="fa-solid fa-clock fa-icon"></i> Previous Projects
+        </h2>
+
+        <!-- ROAR -->
+        <div class="research-card reveal" data-delay="0.1s">
+          <div class="research-img-wrap">
+            <img
+              src="/images/roar.png"
+              alt="ROAR project at Stanford"
+              class="research-img"
+              onerror="
+                this.style.display = 'none';
+                this.nextElementSibling.style.display = 'flex';
+              "
+            />
+          </div>
+          <div class="research-card-body">
+            <div class="research-card-top">
+              <h3>Rapid Online Assessments of Reading (ROAR)</h3>
+              <span class="research-tag">Past</span>
+            </div>
+            <p>
+              The Rapid Online Assessments of Reading (ROAR) is a an
+              open-access, online platform of foundational reading assessments
+              that is led by Stanford University. I programmed gamified reading
+              assessments, coordinated research-practice partnerships with
+              school, and analyzed data to support platform development. I also
+              designed the logo, website, and many of the app assets!
+            </p>
+            <div class="research-meta">
+              <span
+                ><i class="fa-solid fa-school"></i> Stanford University</span
+              >
+            </div>
+            <a
+              href="https://roar.stanford.edu/"
+              target="_blank"
+              class="cta-btn"
+              style="
+                color: white;
+                font-size: 0.82rem;
+                padding: 0.5rem 1rem;
+                margin-top: 1.25rem;
+                display: inline-flex;
+              "
+            >
+              Project Website
+            </a>
+          </div>
+        </div>
+
+        <!-- LMB -->
+        <div class="research-card reveal" data-delay="0.15s">
+          <div class="research-img-wrap">
+            <img
+              src="/images/jet-noah.png"
+              alt="ROAR project at Stanford"
+              class="research-img"
+              style="object-position: center 10%"
+            />
+          </div>
+          <div class="research-card-body">
+            <div class="research-card-top">
+              <h3>Reading Intervention & Brain Development</h3>
+              <span class="research-tag">Past</span>
+            </div>
+            <p>
+              A longitudinal neuroimaging study was conducted in collaboration
+              with Lindamood-Bell to examine how children’s brains change
+              following intensive reading intervention. This was my first
+              research experience where I was able to observe how atypical
+              readers engaged with educational technology. Although my current
+              focus has shifted away from neuroscience, this work provided a
+              valuable perspective on the lived realities of diverse learners.
+            </p>
+            <div class="research-meta">
+              <span
+                ><i class="fa-solid fa-school"></i> Stanford University</span
+              >
+            </div>
+            <a
+              href="https://dyslexia.stanford.edu/"
+              target="_blank"
+              class="cta-btn"
+              style="
+                color: white;
+                font-size: 0.82rem;
+                padding: 0.5rem 1rem;
+                margin-top: 1.25rem;
+                display: inline-flex;
+              "
+            >
+              Project Website
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ FOOTER ══════════════════════════════════════════ -->
+    <footer>
+      <div class="footer-inner">
+        <p>© 2026 Jasmine E. Tran · Made with a lot of coffee and love ☕</p>
+        <div class="footer-socials">
+          <a
+            href="mailto:jasetran@uci.edu"
+            class="footer-icon"
+            aria-label="Email"
+          >
+            <svg
+              width="15"
+              height="15"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <rect x="2" y="4" width="20" height="16" rx="2" />
+              <path d="m2 7 10 7 10-7" />
+            </svg>
+          </a>
+          <a
+            href="https://github.com/jasetran"
+            target="_blank"
+            class="footer-icon"
+            aria-label="GitHub"
+          >
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.165 6.839 9.489.5.09.682-.218.682-.484 0-.236-.009-.866-.013-1.7-2.782.603-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.464-1.11-1.464-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.03-2.682-.103-.254-.447-1.27.098-2.646 0 0 .84-.268 2.75 1.026A9.578 9.578 0 0 1 12 6.836a9.59 9.59 0 0 1 2.504.337c1.909-1.294 2.747-1.026 2.747-1.026.547 1.376.202 2.394.1 2.646.64.698 1.026 1.591 1.026 2.682 0 3.841-2.337 4.687-4.565 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.742 0 .268.18.58.688.482A10.001 10.001 0 0 0 22 12c0-5.523-4.477-10-10-10z"
+              />
+            </svg>
+          </a>
+          <a
+            href="https://www.linkedin.com/in/jaseliztran/"
+            target="_blank"
+            class="footer-icon"
+            aria-label="LinkedIn"
+          >
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
+              />
+            </svg>
+          </a>
+          <a
+            href="https://scholar.google.com/citations?user=dcmtehQAAAAJ&hl=en"
+            target="_blank"
+            class="footer-icon"
+            aria-label="Google Scholar"
+          >
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M5.242 13.769 0 9.5 12 0l12 9.5-5.242 4.269C17.548 11.249 14.978 9.5 12 9.5c-2.977 0-5.548 1.748-6.758 4.269zM12 10a7 7 0 1 0 0 14 7 7 0 0 0 0-14z"
+              />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+  </body>
+</html>
