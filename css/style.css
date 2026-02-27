@@ -250,6 +250,57 @@ nav {
 }
 
 /* ══════════════════════════════════════════════════
+   HAMBURGER BUTTON  (add this block anywhere in style.css)
+══════════════════════════════════════════════════ */
+.nav-hamburger {
+  display: none; /* hidden on desktop */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  width: 38px;
+  height: 38px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  flex-shrink: 0;
+  transition:
+    background var(--transition),
+    border-color var(--transition);
+  padding: 0;
+}
+
+.nav-hamburger:hover {
+  background: var(--sage-pale);
+  border-color: var(--sage-light);
+}
+
+.nav-hamburger span {
+  display: block;
+  width: 18px;
+  height: 2px;
+  background: var(--text);
+  border-radius: 2px;
+  transition:
+    transform 0.25s ease,
+    opacity 0.25s ease;
+  transform-origin: center;
+}
+
+/* Animated X when open */
+.nav-hamburger.open span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+.nav-hamburger.open span:nth-child(2) {
+  opacity: 0;
+  transform: scaleX(0);
+}
+.nav-hamburger.open span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* ══════════════════════════════════════════════════
    LAYOUT HELPERS
 ══════════════════════════════════════════════════ */
 .container {
@@ -764,6 +815,9 @@ section + section {
   .mentorship-card {
     grid-template-columns: 1fr;
   }
+  .gif-badge.hero-gif {
+    margin: 0 auto;
+  }
 }
 
 .cta-btn {
@@ -1272,6 +1326,57 @@ footer {
    RESPONSIVE
 ══════════════════════════════════════════════════ */
 @media (max-width: 640px) {
+  /* --- Nav --- */
+  .nav-hamburger {
+    display: flex; /* show on mobile */
+  }
+
+  .nav-links {
+    position: absolute;
+    top: var(--nav-h);
+    left: 0;
+    right: 0;
+    background: var(--sage-light);
+    border-bottom: 1px solid var(--border);
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.25rem;
+    padding: 0.75rem 1rem 1rem;
+    box-shadow: var(--shadow-md);
+
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    pointer-events: none;
+    transition:
+      max-height 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+      opacity 0.25s ease,
+      padding 0.3s ease;
+  }
+
+  [data-theme="dark"] .nav-links {
+    background: rgba(30, 43, 31, 0.97);
+  }
+
+  .nav-links.open {
+    max-height: 320px;
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .nav-links a {
+    display: block;
+    font-size: 0.95rem;
+    padding: 0.55rem 0.9rem;
+    border-radius: var(--radius-sm);
+  }
+
+  .nav-links a.cv-link {
+    margin-top: 0.25rem;
+    text-align: center;
+  }
+
+  /* --- Hero --- */
   .hero-layout {
     grid-template-columns: 1fr;
     text-align: center;
@@ -1297,19 +1402,18 @@ footer {
     height: 130px;
   }
 
+  /* --- Carousel --- */
   .carousel-slide {
     flex: 0 0 calc((100% - 1rem) / 2);
   }
 
+  /* --- Timeline --- */
   .timeline-item {
     grid-template-columns: 1fr;
     gap: 0.4rem;
   }
 
-  .nav-links a:not(.cv-link) {
-    display: none;
-  }
-
+  /* --- Collab --- */
   .collab-grid {
     grid-template-columns: 1fr;
   }

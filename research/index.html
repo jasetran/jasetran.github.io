@@ -31,17 +31,26 @@
         <a href="/" class="nav-logo">Jasmine E. Tran</a>
         <ul class="nav-links">
           <li><a href="/">Home</a></li>
-          <li><a href="/research/" class="active">Research</a></li>
+          <li><a href="/research/">Research</a></li>
           <li><a href="/resources/">Resources</a></li>
           <li>
             <a
               href="https://docs.google.com/document/d/1BcbYte-SFrXaqr7sQPvWU1XmWC8qRPzU9fMi_P70Ums/edit?usp=sharing"
               target="_blank"
               class="cv-link"
-              >CV</a
-            >
+              >CV
+            </a>
           </li>
         </ul>
+        <button
+          class="nav-hamburger"
+          id="navHamburger"
+          aria-label="Toggle menu"
+          aria-expanded="false"
+        >
+          <span></span><span></span><span></span>
+        </button>
+
         <button
           id="theme-toggle"
           class="theme-toggle"
@@ -327,6 +336,34 @@
       </div>
     </footer>
 
-    <script src="../js/main.js"></script>
+    <script src="/js/main.js"></script>
+
+    <script>
+      (function () {
+        const btn = document.getElementById("navHamburger");
+        const links = document.querySelector(".nav-links");
+        if (!btn || !links) return;
+
+        function closeMenu() {
+          btn.classList.remove("open");
+          links.classList.remove("open");
+          btn.setAttribute("aria-expanded", "false");
+        }
+
+        btn.addEventListener("click", () => {
+          const isOpen = links.classList.toggle("open");
+          btn.classList.toggle("open", isOpen);
+          btn.setAttribute("aria-expanded", String(isOpen));
+        });
+
+        links
+          .querySelectorAll("a")
+          .forEach((a) => a.addEventListener("click", closeMenu));
+
+        document.addEventListener("click", (e) => {
+          if (!e.target.closest("nav")) closeMenu();
+        });
+      })();
+    </script>
   </body>
 </html>
