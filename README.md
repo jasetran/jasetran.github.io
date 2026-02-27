@@ -21,7 +21,6 @@ This site includes:
 
 - HTML5 / CSS3
 - GitHub Pages for hosting
-- [Astro Milky Way Theme](https://astro.build/themes/details/milky-way/) 
 
 ## 🔗 Connect With Me
 
