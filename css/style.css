@@ -894,7 +894,7 @@ section + section {
 }
 
 .timeline-scroll {
-  max-height: 420px;
+  max-height: 300px;
   overflow-y: auto;
   padding-right: 0.5rem;
   -webkit-overflow-scrolling: touch;
@@ -1450,7 +1450,7 @@ footer {
   }
 
   .timeline-scroll {
-    max-height: 320px;
+    max-height: 300px;
     padding-right: 0;
     mask-image: linear-gradient(
       to bottom,
