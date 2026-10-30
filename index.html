@@ -67,19 +67,6 @@
         <div class="hero-layout">
           <!-- TEXT -->
           <div class="hero-text">
-            <div
-              class="gif-badge hero-gif"
-              title="That's me thinking very hard 🤔"
-            >
-              <img
-                src="/images/jet-icon.gif"
-                alt="Jasmine thinking GIF"
-                onerror="
-                  this.parentElement.innerHTML = '🌱';
-                  this.parentElement.style.fontSize = '2rem';
-                "
-              />
-            </div>
             <span class="hero-eyebrow">Ph.D. Student @ UC Irvine</span>
             <h1><em>Jasmine E. Tran</em></h1>
             <p class="hero-tagline">
@@ -158,8 +145,17 @@
 
           <!-- PHOTOS -->
           <div class="hero-photos">
-            <div class="headshot-ring">
+            <div
+              class="headshot-ring"
+              id="headshotReveal"
+              role="button"
+              tabindex="0"
+              aria-pressed="false"
+              aria-label="Show the animated version of Jasmine"
+              title="Thinking very hard!"
+            >
               <img
+                class="headshot-photo"
                 src="/images/jet-headshot.png"
                 alt="Jasmine E. Tran"
                 onerror="
@@ -167,7 +163,18 @@
                   this.removeAttribute('onerror');
                 "
               />
+              <img
+                class="headshot-gif"
+                src="/images/jet-icon.gif"
+                alt="Animated drawing of Jasmine thinking"
+                aria-hidden="true"
+                onerror="this.remove()"
+              />
             </div>
+            <span class="headshot-hint" aria-hidden="true">
+              <span class="hint-mouse">hover for a surprise</span>
+              <span class="hint-touch">tap for a surprise</span>
+            </span>
           </div>
         </div>
       </div>
@@ -654,6 +661,25 @@
 
         document.addEventListener("click", (e) => {
           if (!e.target.closest("nav")) closeMenu();
+        });
+      })();
+
+      // Headshot ↔ GIF reveal: hover is handled in CSS; click/tap/keyboard toggles it
+      (function () {
+        const ring = document.getElementById("headshotReveal");
+        if (!ring) return;
+
+        function toggle() {
+          const on = ring.classList.toggle("is-revealed");
+          ring.setAttribute("aria-pressed", String(on));
+        }
+
+        ring.addEventListener("click", toggle);
+        ring.addEventListener("keydown", (e) => {
+          if (e.key === "Enter" || e.key === " ") {
+            e.preventDefault();
+            toggle();
+          }
         });
       })();
     </script>
